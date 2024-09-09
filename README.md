@@ -10,7 +10,7 @@ SELECT product_id
 FROM products
 WHERE low_fats='Y' AND recyclable='Y';
 
-[584 - Find Customer Referee](https://leetcode.com/problems/find-customer-referee)
+[584 -Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)
 ```sql
 
 SELECT name
