@@ -31,3 +31,9 @@ FROM Views
 WHERE viewer_id = author_id
 ORDER by id ;
 ```
+[1683. Invalid Tweets](https://leetcode.com/problems/invalid-tweets/)
+```sql
+SELECT tweet_id
+FROM Tweets
+WHERE LENGTH(content) > 15;
+```
