@@ -49,3 +49,10 @@ SELECT product_name , year , price
 FROM sales
 JOIN product ON sales.product_id  = product.product_id;
 ```
+[1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/)
+```sql
+SELECT customer_id , count(visit_id) as count_no_trans
+FROM Visits
+WHERE visit_id not in (SELECT visit_id FROM Transactions )
+GROUP BY customer_id;
+```
