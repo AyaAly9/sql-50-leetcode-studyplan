@@ -56,3 +56,15 @@ FROM Visits
 WHERE visit_id not in (SELECT visit_id FROM Transactions )
 GROUP BY customer_id;
 ```
+[1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)
+```sql
+
+Select a.machine_id, round ( Avg(b.timestamp- a.timestamp),3)as processing_time
+From Activity a
+Join Activity b
+On a.machine_id= b.machine_id
+And a.process_id = b.process_id
+And a.activity_type ='start' And b.activity_type = 'end'
+Group by a.machine_id;
+
+```
