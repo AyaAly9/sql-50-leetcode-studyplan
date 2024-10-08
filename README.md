@@ -56,6 +56,13 @@ FROM Visits
 WHERE visit_id not in (SELECT visit_id FROM Transactions )
 GROUP BY customer_id;
 ```
+[197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)
+```sql
+Select a.id
+From Weather a Join Weather b
+On a.recordDate  = DATEADD(day,1,b.recordDate )
+Where a.temperature > b.temperature; 
+```
 [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)
 ```sql
 
@@ -68,3 +75,12 @@ And a.activity_type ='start' And b.activity_type = 'end'
 Group by a.machine_id;
 
 ```
+[577. Employee Bonus](leetcode.com/problems/employee-bonus/)
+```sql
+Select name, bonus
+From Employee e Left join Bonus b
+On e.empId = b.empId
+Where bonus < 1000 Or bonus IS NULL;
+
+```
+
